@@ -1,11 +1,29 @@
-// Aquí estamos obteniendo un objeto del documento HTML (Document Object Model)
-let titulo = document.querySelector('h1');
-titulo.innerHTML = "Juego del número secreto"
+//Definiendo variables
+let numeroSecreto = generarNumeroSecreto();
 
-let parrafo = document.querySelector('p');
-parrafo.innerHTML = "Indica un número del 1 al 10";
 
 //Definiendo funciones
-function intentoDeUsuario(){
-    alert("Clic desde el botón");
+function asignarTextoElemento(elemento, texto){
+    let elementoHTML = document.querySelector(elemento);
+    elementoHTML.innerHTML = texto;
+    return;
 }
+function verificarIntento(){
+    let numeroDeUsuario = parseInt(document.getElementById("valorUsuario").value);
+    if(numeroDeUsuario === numeroSecreto){
+        asignarTextoElemento("p","Acerstaste el número secreto!!");        
+    } else {
+        if(numeroDeUsuario > numeroSecreto){
+            asignarTextoElemento("p", "El número secreto es menor");
+        } else {
+            asignarTextoElemento("p", "El número secreto es mayor");
+        }
+    }
+    return;
+}
+function generarNumeroSecreto() {
+    return Math.floor(Math.random()*10) + 1;
+}
+
+asignarTextoElemento("h1","Juego del número secreto!");
+asignarTextoElemento("p","Indica un número del 1 al 10");
