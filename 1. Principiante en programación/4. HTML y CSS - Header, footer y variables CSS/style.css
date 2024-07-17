@@ -7,7 +7,6 @@
 }
 
 body{
-    height: 100vh;
     box-sizing: border-box;
     background-color: #000000;
     color: #F6F6F6;
@@ -73,4 +72,14 @@ body{
 }
 .presentacion__enlaces__link:hover{
     background-color: #272727;
+}
+
+.footer{
+    background-color: #22D4FD;
+    color: #000000;
+    padding: 24px;
+    text-align: center;
+    font-family: 'Monserrat', sans-serif;
+    font-size: 24px;
+    font-weight: 400;
 }
