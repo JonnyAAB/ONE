@@ -46,10 +46,11 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 82px;
 }
 
 .presentacion__contenido{
-    width: 615px;
+    width: 50%;
     display: flex;
     flex-direction: column;
     gap: 40px;
@@ -88,7 +89,7 @@ body{
       justify-content: center;
       gap: 16px;
       border: 2px solid var(--color-terciario);
-      width: 378px;
+      width: 50%;
       text-align: center;
       border-radius: 8px;
       font-size: 1.5rem;
@@ -101,6 +102,10 @@ body{
 
 .presentacion__enlaces__link:hover{
     background-color: var(--color-hover);
+}
+
+.presentacion__imagen{
+    width: 50%;
 }
 
 .footer{
