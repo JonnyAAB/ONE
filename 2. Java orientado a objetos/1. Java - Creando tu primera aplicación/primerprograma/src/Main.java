@@ -1,3 +1,4 @@
+package primerprograma.src;
 public class Main {
     public static void main(String[] args) {
         System.out.println("Bienvenido(a) a Screen Match");
@@ -17,6 +18,7 @@ public class Main {
                 """  + fechaDeLanzamiento + " con una nota de: " + notaDeLaPelicula;
         System.out.println(sinopsis);
 
+        // Convertir de double a int
         int clasificacion = (int) (media / 2);
         System.out.println(clasificacion);
     }
