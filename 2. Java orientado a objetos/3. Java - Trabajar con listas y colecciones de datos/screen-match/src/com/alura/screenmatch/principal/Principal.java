@@ -1,3 +1,5 @@
+package com.alura.screenmatch.principal;
+
 import java.util.ArrayList;
 
 import com.alura.screenmatch.calculos.CalculadoraDeTiempo;
@@ -11,7 +13,6 @@ public class Principal {
         Pelicula miPelicula = new Pelicula("Encanto", 2021);
         miPelicula.setDuracionEnMinutos(180);
         System.out.println("Duración de la película: " + miPelicula.getDuracionEnMinutos());
-
         miPelicula.muestraFichaTecnica();
         miPelicula.evalua(8);
         miPelicula.evalua(5);
@@ -25,6 +26,7 @@ public class Principal {
         lost.setEpisodiosPorTemporada(10);
         lost.setMinutosPorEpisodio(50);
         System.out.println("Duracion de la série: " + lost.getDuracionEnMinutos());
+
 
         Pelicula otraPelicula = new Pelicula("Avatar", 2023);
         otraPelicula.setDuracionEnMinutos(200);
