@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 import com.alura.screenmatch.calculos.CalculadoraDeTiempo;
 import com.alura.screenmatch.calculos.FiltroRecomendacion;
 import com.alura.screenmatch.modelos.Episodio;
@@ -18,7 +20,6 @@ public class Principal {
         miPelicula.evalua(10);
         System.out.println("Total de evaluaciones: " + miPelicula.getTotalDeEvaluaciones());
         System.out.println(miPelicula.calculaMediaEvaluaciones());
-
 
         Serie lost = new Serie();
         lost.setNombre("Lost");
@@ -48,5 +49,22 @@ public class Principal {
         episodio.setSerie(lost);
         episodio.setTotalVisualizaciones(300);
         filtro.filtra(episodio);
+
+        var peliculaDeJonny = new Pelicula();
+        peliculaDeJonny.setNombre("El señor de los anillos");
+        peliculaDeJonny.setDuracionEnMinutos(180);
+        peliculaDeJonny.setFechaDeLanzamiento(2001);
+
+        ArrayList<Pelicula> listaDePeliculas = new ArrayList<>();
+
+        listaDePeliculas.add(miPelicula);
+        listaDePeliculas.add(otraPelicula);
+        listaDePeliculas.add(peliculaDeJonny);
+
+        System.out.println("Tamaño de la lista: " + listaDePeliculas.size());
+        System.out.println("La primera pelicula es: " + listaDePeliculas.get(0).getNombre());
+        System.out.println(listaDePeliculas);
+
+        System.out.println("toString de la pelicula: " + listaDePeliculas.get(0).toString());
     }
 }
