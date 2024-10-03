@@ -8,6 +8,11 @@ public class Titulo {
     private int totalDeEvaluaciones;
     private int duracionEnMinutos;
 
+    public Titulo(String nombre, int fechaDeLanzamiento) {
+        this.nombre = nombre;
+        this.fechaDeLanzamiento = fechaDeLanzamiento;
+    }
+
     public String getNombre() {
         return nombre;
     }
@@ -44,17 +49,17 @@ public class Titulo {
         this.duracionEnMinutos = duracionEnMinutos;
     }
 
-    public void muestraFichaTecnica(){
+    public void muestraFichaTecnica() {
         System.out.println("Nombre de la película: " + nombre);
         System.out.println("Año de lanzamiento: " + fechaDeLanzamiento);
     }
 
-    public void evalua(double nota){
+    public void evalua(double nota) {
         sumaDeLasEvaluaciones += nota;
         totalDeEvaluaciones++;
     }
 
-    public double calculaMediaEvaluaciones(){
+    public double calculaMediaEvaluaciones() {
         return sumaDeLasEvaluaciones / totalDeEvaluaciones;
     }
 }
